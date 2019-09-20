@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/emprestimos/emprestimos.iml" filepath="$PROJECT_DIR$/emprestimos/emprestimos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" filepath="$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oferta-cc/oferta-cc.iml" filepath="$PROJECT_DIR$/oferta-cc/oferta-cc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ofertacc/ofertacc.iml" filepath="$PROJECT_DIR$/ofertacc/ofertacc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/segurovida/segurovida.iml" filepath="$PROJECT_DIR$/segurovida/segurovida.iml" />
+    </modules>
+  </component>
+</project>
