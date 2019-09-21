@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  kafka:
+    bootstrap-servers: 192.168.99.100:9092
+    client-id: dealer
+  cloud:
+    stream:
+      kafka:
+        streams:
+          binder:
+            application-id: dealer
+      bindings:
+        mytopic-in:
+          destination: mytopic
+          contentType: application/json
+        mytopic-out:
+          destination: mytopic
+          contentType: application/json

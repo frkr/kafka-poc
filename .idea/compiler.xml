@@ -9,10 +9,12 @@
         <module name="ofertacc" />
         <module name="emprestimos" />
         <module name="oferta-cc" />
+        <module name="dealer" />
         <module name="segurovida" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dealer" target="1.8" />
       <module name="emprestimos" target="1.8" />
       <module name="kafka-spring-stream-aggregation" target="1.5" />
       <module name="oferta-cc" target="1.8" />
@@ -22,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dealer" options="-parameters" />
       <module name="emprestimos" options="-parameters" />
       <module name="oferta-cc" options="-parameters" />
       <module name="ofertacc" options="-parameters" />

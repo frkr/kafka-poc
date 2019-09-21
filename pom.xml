@@ -13,6 +13,7 @@
         <module>ofertacc</module>
         <module>segurovida</module>
         <module>emprestimos</module>
+        <module>dealer</module>
     </modules>
 
     <properties>
