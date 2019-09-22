@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dealer/dealer.iml" filepath="$PROJECT_DIR$/dealer/dealer.iml" />
       <module fileurl="file://$PROJECT_DIR$/emprestimos/emprestimos.iml" filepath="$PROJECT_DIR$/emprestimos/emprestimos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-poc.iml" filepath="$PROJECT_DIR$/kafka-poc.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" filepath="$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" />
       <module fileurl="file://$PROJECT_DIR$/oferta-cc/oferta-cc.iml" filepath="$PROJECT_DIR$/oferta-cc/oferta-cc.iml" />
       <module fileurl="file://$PROJECT_DIR$/ofertacc/ofertacc.iml" filepath="$PROJECT_DIR$/ofertacc/ofertacc.iml" />

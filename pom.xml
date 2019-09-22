@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>frkr.github</groupId>
-    <artifactId>kafka-spring-stream-aggregation</artifactId>
+    <artifactId>kafka-poc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>kafka-spring-stream-aggregation</name>
+    <name>kafka-poc</name>
 
     <modules>
         <module>ofertacc</module>
