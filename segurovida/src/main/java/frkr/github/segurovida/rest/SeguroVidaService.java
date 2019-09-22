@@ -1,7 +1,7 @@
 package frkr.github.segurovida.rest;
 
-import frkr.github.ClienteRequest;
-import frkr.github.SeguroVidaResponse;
+import frkr.github.kafka.ClienteRequest;
+import frkr.github.kafka.SeguroVidaResponse;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="zookeeper" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="command" value="" />
+        <option name="containerName" value="zookeeper" />
+        <option name="entrypoint" value="" />
+        <option name="imageTag" value="wurstmeister/zookeeper" />
+        <option name="commandLineOptions" value="-d --rm -p 2181:2181 -e KAFKA_ADVERTISED_HOST_NAME=zookeeper " />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

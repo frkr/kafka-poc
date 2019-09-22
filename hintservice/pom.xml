@@ -11,11 +11,11 @@
     </parent>
 
     <groupId>frkr.github</groupId>
-    <artifactId>segurovida</artifactId>
+    <artifactId>hintservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>segurovida</name>
+    <name>hintservice</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +69,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- KAFKA -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <!-- /KAFKA -->
 
     </dependencies>
 

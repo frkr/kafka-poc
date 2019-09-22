@@ -1,0 +1,50 @@
+### Ofertas CC
+POST http://localhost:8181/rs/ofertacc
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###
+### Seguros Vida
+POST http://localhost:8282/rs/segurovida
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###
+### Emprestimos
+POST http://localhost:8383/rs/emprestimos
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###
+### Hint Service
+POST http://localhost:8484/rs/hintservice
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###
+### Orquestrador
+POST http://localhost:8080/rs/orquestrador
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+###

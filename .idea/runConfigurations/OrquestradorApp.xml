@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="OrquestradorApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="orquestrador" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="frkr.github.orquestrador.OrquestradorApp" />
+    <option name="DEBUG_MODE" value="true" />
+    <option name="HIDE_BANNER" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

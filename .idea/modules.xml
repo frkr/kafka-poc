@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dealer/dealer.iml" filepath="$PROJECT_DIR$/dealer/dealer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contratos/contratos.iml" filepath="$PROJECT_DIR$/contratos/contratos.iml" />
       <module fileurl="file://$PROJECT_DIR$/emprestimos/emprestimos.iml" filepath="$PROJECT_DIR$/emprestimos/emprestimos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hintservice/hintservice.iml" filepath="$PROJECT_DIR$/hintservice/hintservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-poc.iml" filepath="$PROJECT_DIR$/kafka-poc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" filepath="$PROJECT_DIR$/kafka-spring-stream-aggregation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/oferta-cc/oferta-cc.iml" filepath="$PROJECT_DIR$/oferta-cc/oferta-cc.iml" />
       <module fileurl="file://$PROJECT_DIR$/ofertacc/ofertacc.iml" filepath="$PROJECT_DIR$/ofertacc/ofertacc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orquestrador/orquestrador.iml" filepath="$PROJECT_DIR$/orquestrador/orquestrador.iml" />
       <module fileurl="file://$PROJECT_DIR$/segurovida/segurovida.iml" filepath="$PROJECT_DIR$/segurovida/segurovida.iml" />
     </modules>
   </component>

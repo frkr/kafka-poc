@@ -2,10 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contratos" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dealer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/emprestimos" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/oferta-cc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hintservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ofertacc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/orquestrador" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/segurovida" charset="UTF-8" />
   </component>
 </project>

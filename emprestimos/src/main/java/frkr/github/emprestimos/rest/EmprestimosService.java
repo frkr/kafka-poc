@@ -1,7 +1,7 @@
 package frkr.github.emprestimos.rest;
 
-import frkr.github.ClienteRequest;
-import frkr.github.EmprestimosResponse;
+import frkr.github.kafka.ClienteRequest;
+import frkr.github.kafka.EmprestimosResponse;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

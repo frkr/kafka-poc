@@ -1,8 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="AllAPI" type="CompoundRunConfigurationType">
-    <toRun name="SeguroVidaApp" type="SpringBootApplicationConfigurationType" />
-    <toRun name="OfertaCCApp" type="SpringBootApplicationConfigurationType" />
-    <toRun name="EmprestimosApp" type="SpringBootApplicationConfigurationType" />
-    <method v="2" />
-  </configuration>
-</component>

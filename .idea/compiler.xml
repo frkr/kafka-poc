@@ -6,29 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="contratos" />
+        <module name="orquestrador" />
         <module name="segurovida" />
-        <module name="emprestimos" />
         <module name="ofertacc" />
-        <module name="dealer" />
-        <module name="oferta-cc" />
+        <module name="hintservice" />
+        <module name="emprestimos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dealer" target="1.8" />
+      <module name="contratos" target="1.8" />
       <module name="emprestimos" target="1.8" />
+      <module name="hintservice" target="1.8" />
       <module name="kafka-poc" target="1.5" />
-      <module name="kafka-spring-stream-aggregation" target="1.5" />
-      <module name="oferta-cc" target="1.8" />
       <module name="ofertacc" target="1.8" />
+      <module name="orquestrador" target="1.8" />
       <module name="segurovida" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="contratos" options="-parameters" />
       <module name="dealer" options="-parameters" />
       <module name="emprestimos" options="-parameters" />
+      <module name="hintservice" options="-parameters" />
       <module name="oferta-cc" options="-parameters" />
       <module name="ofertacc" options="-parameters" />
+      <module name="orquestrador" options="-parameters" />
       <module name="segurovida" options="-parameters" />
     </option>
   </component>

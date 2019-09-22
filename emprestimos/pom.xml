@@ -24,6 +24,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>frkr.github</groupId>
+            <artifactId>contratos</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
