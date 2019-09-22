@@ -13,9 +13,9 @@ spring:
           binder:
             application-id: dealer
       bindings:
-        mytopic-in:
-          destination: mytopic
+        request:
+          destination: request
           contentType: application/json
-        mytopic-out:
-          destination: mytopic
+        response:
+          destination: response
           contentType: application/json

@@ -28,7 +28,7 @@
 docker rm -f zookeeper
 docker rm -f kafka
 docker run -d --rm -p 2181:2181 --name zookeeper -e KAFKA_ADVERTISED_HOST_NAME=zookeeper wurstmeister/zookeeper
-docker run -d --rm -p 9092:9092 --name kafka --link zookeeper -e KAFKA_ADVERTISED_HOST_NAME=192.168.99.100 -e KAFKA_ADVERTISED_PORT=9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_CREATE_TOPICS="mytopic:1:1:delete" wurstmeister/kafka
+docker run -d --rm -p 9092:9092 --name kafka --link zookeeper -e KAFKA_ADVERTISED_HOST_NAME=192.168.99.100 -e KAFKA_ADVERTISED_PORT=9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_CREATE_TOPICS="request:1:1:delete,response:1:1:delete" wurstmeister/kafka
 docker logs -f kafka
 
 
