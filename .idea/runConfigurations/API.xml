@@ -1,6 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="REST" type="CompoundRunConfigurationType">
+  <configuration default="false" name="API" type="CompoundRunConfigurationType">
     <toRun name="OfertaCCApp" type="SpringBootApplicationConfigurationType" />
+    <toRun name="OrquestradorApp" type="SpringBootApplicationConfigurationType" />
     <toRun name="HintServiceApp" type="SpringBootApplicationConfigurationType" />
     <toRun name="EmprestimosApp" type="SpringBootApplicationConfigurationType" />
     <toRun name="SeguroVidaApp" type="SpringBootApplicationConfigurationType" />
