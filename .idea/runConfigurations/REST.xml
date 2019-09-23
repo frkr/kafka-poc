@@ -1,8 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="REST" type="CompoundRunConfigurationType">
-    <toRun name="SeguroVidaApp" type="SpringBootApplicationConfigurationType" />
-    <toRun name="EmprestimosApp" type="SpringBootApplicationConfigurationType" />
     <toRun name="OfertaCCApp" type="SpringBootApplicationConfigurationType" />
+    <toRun name="HintServiceApp" type="SpringBootApplicationConfigurationType" />
+    <toRun name="EmprestimosApp" type="SpringBootApplicationConfigurationType" />
+    <toRun name="SeguroVidaApp" type="SpringBootApplicationConfigurationType" />
     <method v="2" />
   </configuration>
 </component>

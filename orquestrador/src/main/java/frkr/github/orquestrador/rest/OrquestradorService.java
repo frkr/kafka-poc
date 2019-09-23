@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class OrquestradorService {
 
     @Autowired
-    private ReplyingKafkaTemplate<String, ClienteRequest, OrquestradorResponse> kafkaTemplate;
+    private ReplyingKafkaTemplate<String, ClienteRequest, OrquestradorResponse> kafka;
 
     @Value("${app.kafka.topic.request}")
     private String request;
@@ -27,7 +27,7 @@ public class OrquestradorService {
 
     @RequestMapping(value = "orquestrador", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public OrquestradorResponse orquestrador(@RequestBody ClienteRequest clienteRequest) throws Exception {
-        return Producer.send(kafkaTemplate,request,response,clienteRequest).get(30, TimeUnit.SECONDS).value();
+        return Producer.send(kafka, request, response, clienteRequest).get(30, TimeUnit.SECONDS).value();
     }
 
 }

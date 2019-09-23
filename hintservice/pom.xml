@@ -70,13 +70,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- KAFKA -->
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-        </dependency>
-        <!-- /KAFKA -->
-
     </dependencies>
 
     <build>
