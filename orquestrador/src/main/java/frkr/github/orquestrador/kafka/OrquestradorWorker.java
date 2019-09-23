@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
+import org.springframework.kafka.requestreply.RequestReplyFuture;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
@@ -36,24 +37,48 @@ public class OrquestradorWorker {
     //endregion
 
     @Autowired
-    private ReplyingKafkaTemplate<String, ClienteRequest, OrquestradorResponse> hint;
+    private ReplyingKafkaTemplate<String, ClienteRequest, OrquestradorResponse> kafka;
 
     @KafkaListener(topics = "${app.kafka.topic.request}")
     @SendTo("${app.kafka.topic.response}")
     public OrquestradorResponse handle(ClienteRequest request) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
+        OrquestradorResponse retorno = new OrquestradorResponse();
 
         // Consultar o Hint Service
 
-        OrquestradorResponse hintResponse = Producer.send(hint, hintin, hintout, request).get(30, TimeUnit.SECONDS).value();
-        Object teste = hintResponse.getRetornos().get(0);
+        HintServiceResponse hint = mapper.convertValue(
+                Producer.send(kafka, hintin, hintout, request).get(30, TimeUnit.SECONDS).value().getRetornos().get(0)
+                , HintServiceResponse.class);
 
-        HintServiceResponse teste2 = mapper.convertValue(teste, HintServiceResponse.class);
-        System.out.println(
-                teste2
-        );
+        // Consultar backend API em forma paralelizada
 
-        return new OrquestradorResponse().add(new ClienteRequest(3L));// FIXME
+        RequestReplyFuture<String, ClienteRequest, OrquestradorResponse> ccRequest = null;
+        RequestReplyFuture<String, ClienteRequest, OrquestradorResponse> segRequest = null;
+        RequestReplyFuture<String, ClienteRequest, OrquestradorResponse> empresRequest = null;
+        for (Integer i : hint.getRetornos()) {
+            if (i == 1) {
+                ccRequest = Producer.send(kafka, ccin, ccout, request);
+            } else if (i == 2) {
+                segRequest = Producer.send(kafka, segvidain, segvidaout, request);
+            } else if (i == 3) {
+                empresRequest = Producer.send(kafka, empresin, empresout, request);
+            }
+        }
+
+        // Agregar resultados
+
+        for (Integer i : hint.getRetornos()) {
+            if (i == 1) {
+                retorno.add(ccRequest.get(30, TimeUnit.SECONDS).value().getRetornos().get(0));
+            } else if (i == 2) {
+                retorno.add(segRequest.get(30, TimeUnit.SECONDS).value().getRetornos().get(0));
+            } else if (i == 3) {
+                retorno.add(empresRequest.get(30, TimeUnit.SECONDS).value().getRetornos().get(0));
+            }
+        }
+
+        return retorno;
     }
 
 }
