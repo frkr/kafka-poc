@@ -1,14 +1,16 @@
-# API - Serviços sem Kafka
+# Conceito
+
+#### API - Serviços sem Kafka
 - REST Ofertas Cartao Credito
 - REST Seguro de Vida
 - REST Emprestimos
 - REST HintService
 - Contratos
 
-# Worker
+#### Worker
 - Ordenador (REST / Kafka)
 
-# Filas
+#### Filas
 - request
 - response
 - hintin
@@ -20,7 +22,7 @@
 - empresin
 - empresout
 
-# Roundtrip
+#### Roundtrip
 
 - Receber uma chamada REST -> Ordenador
 - Produzir para fila "input" HintService
@@ -32,7 +34,8 @@
 - Agregar resultados de 3 filas para uma fila (responder na ordem do HintService)
 - Responder REST <- Ordenador
 
-# Docker
+# Como executar
+#### 1) Docker
 - Chamada do Kafka já cria as filas
 
 ```shell script
@@ -40,6 +43,15 @@ docker run -d --rm -p 2181:2181 --name zookeeper -e KAFKA_ADVERTISED_HOST_NAME=z
 docker run -d --rm -p 9092:9092 --name kafka --link zookeeper -e KAFKA_ADVERTISED_HOST_NAME=192.168.99.100 -e KAFKA_ADVERTISED_PORT=9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_CREATE_TOPICS=request:1:1:delete,response:1:1:delete,hintin:1:1:delete,hintout:1:1:delete,ccin:1:1:delete,ccout:1:1:delete,segvidain:1:1:delete,segvidaout:1:1:delete,empresin:1:1:delete,empresout:1:1:delete wurstmeister/kafka
 ```
 
+#### 2) Código
+- Para clonar
+
+```shell script
+git clone https://github.com/frkr/kafka-poc.git
+cd kafka-poc
+```
+
+#### 3) Executando projeto
 ```shell script
 mvn install -f contratos/pom.xml
 
@@ -51,7 +63,9 @@ mvn spring-boot:run -f orquestrador/pom.xml &
 
 ```
 
-# Chamada Orquestrador
+# 4) Chamada Orquestrador
+- Fazer chamada HTTTP
+- Pode ser feito via Swagger: http://localhost:8080/swagger-ui.html
 ```http request
 POST http://localhost:8080/rs/orquestrador
 Accept: application/json
